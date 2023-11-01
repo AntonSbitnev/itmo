@@ -2,19 +2,20 @@ package ru.itmo.java.basics.lesson4;
 
 public class ArrayNumberCheck {
     public static class Main {
-        public static void main(String[] args) {
-            int[] array = {2, 47, 6, 66, 8, 13, 77, 987};
-
-            boolean contains1or3 = false;
-
-            for (int number : array) {
+        public static boolean Contains1Or3(int[] arr) {
+            for (int number : arr) {
                 if (number == 1 || number == 3) {
-                    contains1or3 = true;
-                    break;
+                    return true;
                 }
             }
+            return false;
+        }
 
-            if (contains1or3) {
+        public static void main(String[] args) {
+            int[] arr = {24, 61, 191, 555, 582, 777};
+            boolean result = Contains1Or3(arr);
+
+            if (result) {
                 System.out.println("Массив содержит число 1 или 3.");
             } else {
                 System.out.println("Массив не содержит число 1 или 3.");
