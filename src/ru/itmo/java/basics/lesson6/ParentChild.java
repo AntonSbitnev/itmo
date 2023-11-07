@@ -4,7 +4,7 @@ public class ParentChild {
 
         static class ParentClass {
             protected int number;
-            public int Parent() {
+            public int getNumber() {
                 Scanner scanner = new Scanner(System.in);
                 System.out.print("Введите целое число: ");
                 number = scanner.nextInt();
@@ -15,7 +15,7 @@ public class ParentChild {
 
         static class ChildClass extends ParentClass {
             public void displayNumber() {
-                System.out.println("Переменная из родительского класса: " + Parent());
+                System.out.println("Переменная из родительского класса: " + getNumber());
             }
         }
 
