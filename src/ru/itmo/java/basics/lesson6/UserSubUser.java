@@ -3,35 +3,37 @@ package ru.itmo.java.basics.lesson6;
 import java.util.Scanner;
 public class UserSubUser {
 
-
-    static class User {
-        private int age;
-
+    static abstract class User {
         public int getAge() {
-            return age;
+            Scanner scanner = new Scanner(System.in);
+            System.out.print("Введите ваш возраст: ");
+            return scanner.nextInt();
         }
+        public abstract String getName();
     }
 
     static class SubUser extends User {
         @Override
-        public String toString() {
-            return "Alex Cross";
+        public String getName() {
+            System.out.print("Введите ваше имя: ");
+            Scanner scanner = new Scanner(System.in);
+            return scanner.nextLine();
         }
     }
 
     public static class Main {
         public static void main(String[] args) {
-            Scanner scanner = new Scanner(System.in);
+            SubUser user = new SubUser();
+            int age = user.getAge();
+            String name = user.getName();
 
-            System.out.print("Введите возраст: ");
-            int age = scanner.nextInt();
-
-            User user = new User();
-            user.age = age;
-            System.out.println("Возраст пользователя: " + user.getAge());
-
-            SubUser subUser = new SubUser();
-            System.out.println("Имя пользователя: " + subUser.toString());
+            System.out.println("Ваш возраст: " + age);
+            System.out.println("Ваше имя: " + name);
         }
     }
 }
+
+
+
+
+

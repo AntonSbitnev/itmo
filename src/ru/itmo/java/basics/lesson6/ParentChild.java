@@ -2,26 +2,27 @@ package ru.itmo.java.basics.lesson6;
 import java.util.Scanner;
 public class ParentChild {
 
+        static class ParentClass {
+            protected int number;
+            public int Parent() {
+                Scanner scanner = new Scanner(System.in);
+                System.out.print("Введите целое число: ");
+                number = scanner.nextInt();
+                return number;
+            }
 
-    public static class ParentClass {
-        public int num;
+        }
 
-        public static void main (String[] args) {
-            ParentClass Obj = new ParentClass();
-            Obj.getNumber();
+        static class ChildClass extends ParentClass {
+            public void displayNumber() {
+                System.out.println("Переменная из родительского класса: " + Parent());
+            }
+        }
 
-            ChildClass subObject = new ChildClass();
-            subObject.displayNumber(Obj);
+        public static class Main {
+            public static void main(String[] args) {
+                ChildClass child = new ChildClass();
+                child.displayNumber();
+            }
         }
-        public void getNumber() {
-            Scanner scanner = new Scanner(System.in);
-            System.out.print("Введите целое число: ");
-            num = scanner.nextInt();
-        }
-    }
-    public static class ChildClass {
-        public void displayNumber(ParentClass Obj) {
-            System.out.println("Введенное число: " + Obj.num);
-        }
-    }
 }

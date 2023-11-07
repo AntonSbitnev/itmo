@@ -10,11 +10,11 @@ public class AbstractClass {
             this.LastName = LastName;
         }
 
-        public String GetFirstName() {
+        public String getFirstName() {
             return FirstName;
         }
 
-        public String GetLastName() {
+        public String getLastName() {
             return LastName;
         }
 
@@ -31,7 +31,7 @@ public class AbstractClass {
 
         @Override
         public void PrintInfo() {
-            System.out.println("Клиент: " + GetFirstName() + " " + GetLastName());
+            System.out.println("Клиент: " + getFirstName() + " " + getLastName());
             System.out.println("Банк: " + BankName);
         }
     }
@@ -46,7 +46,7 @@ public class AbstractClass {
 
         @Override
         public void PrintInfo() {
-            System.out.println("Работник банка: " + GetFirstName() + " " + GetLastName());
+            System.out.println("Работник банка: " + getFirstName() + " " + getLastName());
             System.out.println("Банк: " + BankName);
         }
 
