@@ -3,7 +3,7 @@ package ru.itmo.java.basics.lesson7;
 public class Airplane {
 
     public class Wing {
-        private double weigth;
+        private final double  weigth;
 
         public Wing(double weigth) {
             this.weigth = weigth;
