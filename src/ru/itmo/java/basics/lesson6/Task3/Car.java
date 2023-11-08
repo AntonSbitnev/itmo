@@ -1,4 +1,4 @@
-package ru.itmo.java.basics.lesson6;
+package ru.itmo.java.basics.lesson6.Task3;
 
 public class Car {
     public int weight;

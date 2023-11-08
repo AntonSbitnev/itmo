@@ -1,4 +1,4 @@
-package ru.itmo.java.basics.lesson6;
+package ru.itmo.java.basics.lesson6.Task3;
 
 public class TruckExtendsCar {
 
@@ -22,11 +22,7 @@ public class TruckExtendsCar {
             System.out.println("Грузовик имеет " + numberOfWheels + " колес");
             System.out.println("Максимальный вес грузовика: " + maxWeight + " кг");
         }
-        public static void main(String[] args) {
-            Truck truck = new Truck(12000, "Volvo", 'B', 120.5f, 18, 40000.0);
-            truck.outPut();
-            truck.newWheels(20);
-        }
+
     }
 
 }

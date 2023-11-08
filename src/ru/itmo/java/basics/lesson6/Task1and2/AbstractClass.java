@@ -1,4 +1,4 @@
-package ru.itmo.java.basics.lesson6;
+package ru.itmo.java.basics.lesson6.Task1and2;
 
 public class AbstractClass {
     abstract static class Human {

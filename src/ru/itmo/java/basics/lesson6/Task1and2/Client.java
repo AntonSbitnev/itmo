@@ -1,4 +1,4 @@
-package ru.itmo.java.basics.lesson6;
+package ru.itmo.java.basics.lesson6.Task1and2;
 
 class Client implements InfoPrinter {
     private final String firstName;
